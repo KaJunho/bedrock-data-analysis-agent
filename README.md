@@ -14,7 +14,7 @@ Before you begin, ensure you have:
 * [SAM CLI Installed](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 * [Python 3.9 or later](https://www.python.org/downloads/) 
 * [Boto3 1.36 or later](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html)
-* Sufficient permissions for you IAM user
+* Sufficient permissions for your IAM user
 * Anthropic Claude 3.5 Haiku and Sonnet models enabled in Amazon Bedrock
 * Run this command to create a service-linked role for RDS:
 ```bash
