@@ -101,7 +101,7 @@ Execute the following command to create the database and load the sample data:
 python3 resources/create-sales-database.py
 ```
 
-The script uses the **[video_games_sales_random_avg_sales.csv](./resources/database/video_games_sales_random_avg_sales.csv)** as the data source.
+The script uses the **[video_games_sales_random_avg_sales.csv]** as the data source.
 
 
 <hr/>
