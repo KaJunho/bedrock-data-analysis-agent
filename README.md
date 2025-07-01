@@ -148,7 +148,7 @@ To use the agent in your front-end application:
 - Go to your **Agent Overview**
 - Click **Create Alias**
 
-You can now proceed to the [Front-End Implementation - Integrating Amazon Bedrock Agent with a Ready-to-Use Data Analyst Assistant Application](../amplify-video-games-sales-assistant-bedrock-agent/). The tutorial will ask you for your **Agent Alias** along with the other services that you have created so far.
+You can now proceed to the next section. The tutorial will ask you for your **Agent Alias** along with the other services that you have created so far.
 
 <hr/>
 
