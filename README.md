@@ -1,5 +1,6 @@
-# bedrock-data-analysis-agent
-A data analysis assistant for video game sales&amp;reviews data analysis based on Bedrock Agent.
+# Bedrock Data Analysis Agent
+A data analysis assistant for video game sales and reviews data analysis based on Bedrock Agent.
+Find demo here: https://amazon.awsapps.com/workdocs-amazon/index.html#/document/c186c2e260413a50726f9ff849d0d8a7d50420f69a7517a3483dda0b6d5bf7a1
 
 ## Backend Deployment
 ### Prerequisites
@@ -29,7 +30,7 @@ sam build
 > [!CAUTION]
 > If you encounter a **Build Failed error**, you might need to change the Python version in the [template.yaml](./template.yaml) file. By default, the Lambda function uses **Python 3.13**. You can modify this setting on **line 121** of the **[template.yaml](./template.yaml)** file to use a Python version lower than 3.13 that you have installed.
 
-Now deploy the SAM application:
+Now deploy the SAM application under the SAM project foler (sam-bedrock-video-games-sales-assistant/):
 
 ```bash
 sam deploy --guided --capabilities CAPABILITY_NAMED_IAM
