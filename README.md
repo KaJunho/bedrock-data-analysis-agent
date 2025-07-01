@@ -6,7 +6,6 @@ For video demo, check out [demo](https://amazon.awsapps.com/workdocs-amazon/inde
 The architecture of this project is shown below.
 ![new-agent-arch](https://github.com/user-attachments/assets/f48a1eb5-7a01-4637-9f18-2827963c5276)
 
----
 ## Backend Deployment
 ### Prerequisites
 
@@ -254,7 +253,7 @@ npm start
 ```
 
 
-### Test questions
+#### Test questions
 Here are some test questions in Chinese.
 ```bash
 你好！
