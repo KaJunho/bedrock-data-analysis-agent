@@ -1,6 +1,6 @@
 # Bedrock Data Analysis Agent
 A data analysis assistant for video game sales and reviews data analysis based on Bedrock Agent.
-Find demo here: https://amazon.awsapps.com/workdocs-amazon/index.html#/document/c186c2e260413a50726f9ff849d0d8a7d50420f69a7517a3483dda0b6d5bf7a1
+For more information, check out [demo](https://amazon.awsapps.com/workdocs-amazon/index.html#/document/c186c2e260413a50726f9ff849d0d8a7d50420f69a7517a3483dda0b6d5bf7a1).
 
 ## Backend Deployment
 ### Prerequisites
