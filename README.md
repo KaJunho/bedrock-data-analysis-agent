@@ -6,7 +6,7 @@ For video demo, check out [demo](https://amazon.awsapps.com/workdocs-amazon/inde
 The architecture of this project is shown below.
 ![new-agent-arch](https://github.com/user-attachments/assets/f48a1eb5-7a01-4637-9f18-2827963c5276)
 
-
+---
 ## Backend Deployment
 ### Prerequisites
 
@@ -22,7 +22,7 @@ Before you begin, ensure you have:
 aws iam create-service-linked-role --aws-service-name rds.amazonaws.com
 ```
 
-<hr/>
+---
 
 ### Deploy the Back-End Services with AWS SAM
 
@@ -79,7 +79,7 @@ After deployment completes, the following services will be created:
 > [!NOTE]
 > To learn about agent creation configuration, please refer to [this tutorial](./manual_database_data_load_and_agent_creation.md), which provides step-by-step guidance for setting up an Amazon Bedrock Agent in the AWS Console.
 
-<hr/>
+---
 
 ### Load Sample Data into Aurora PostgreSQL Database
 
@@ -254,34 +254,22 @@ npm start
 ```
 
 
-### Application Features
-
-Congratulations! Your Data Analyst Assistant can provide you with the following conversational experience:
-
-- **Conversational interface with an agent responding to user questions**
-
-![Video Games Sales Assistant](../images/preview1.png)
-
-- **Detailed answers including the rationale behind SQL query generation**
-
-![Video Games Sales Assistant](../images/preview2.png)
-
-- **Raw query results displayed in tabular format**
-
-![Video Games Sales Assistant](../images/preview3.png)
-
-- **Chart visualization generated from the agent's answer and the data query results (created using [Apexcharts](https://apexcharts.com/))**.
-
-![Video Games Sales Assistant](../images/preview4.png)
-
-- **Summary and conclusion derived from the data analysis conversation**
-
-![Video Games Sales Assistant](../images/preview5.png)
+### Test questions
+Here are some test questions in Chinese.
+```bash
+你好！
+你能如何帮助我？
+2015-2025年哪一年发布的游戏数量最多？
+请找出总销量最佳的三款游戏。
+2015年至2019年发布的游戏，在各地区的总销售额是多少？请以百分比形式给我数据。
+请简单介绍一下Moon Storm这款游戏
+请列出玩家们对Moon Storm这款游戏的正面评价（包含玩家姓名ID及邮箱）
+请总结玩家们对Moon Storm这款游戏的负面评价（包含玩家姓名ID及邮箱）
+请找出2015年至2025年期间全球最畅销的游戏产品，以饼状图的形式展示该最畅销游戏产品在不同地区的销售数据分布情况。然后，列举玩家们（包含玩家的个人资料信息）对这款游戏的评价。最后基于这些评价简要解释这款游戏能够在全球范围内最畅销的原因。
+```
 
 
-
-## Thank You
+### Thank You
 
 ### License
-
 This project is licensed under the Apache-2.0 License.
