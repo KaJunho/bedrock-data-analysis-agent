@@ -16,6 +16,8 @@ Before you begin, ensure you have:
 aws iam create-service-linked-role --aws-service-name rds.amazonaws.com
 ```
 
+<hr/>
+
 ### Deploy the Back-End Services with AWS SAM
 
 Navigate to the SAM project folder (sam-bedrock-video-games-sales-assistant/) and execute::
@@ -71,6 +73,8 @@ After deployment completes, the following services will be created:
 > [!NOTE]
 > To learn about agent creation configuration, please refer to [this tutorial](./manual_database_data_load_and_agent_creation.md), which provides step-by-step guidance for setting up an Amazon Bedrock Agent in the AWS Console.
 
+<hr/>
+
 ### Load Sample Data into Aurora PostgreSQL Database
 
 Set up the required environment variables:
@@ -99,6 +103,9 @@ python3 resources/create-sales-database.py
 
 The script uses the **[video_games_sales_random_avg_sales.csv](./resources/database/video_games_sales_random_avg_sales.csv)** as the data source.
 
+
+<hr/>
+
 ### Sync Knowledge Base Data Source
 
 Navigate to your Amazon Bedrock Knowledge Bases control panel:
@@ -106,6 +113,9 @@ Navigate to your Amazon Bedrock Knowledge Bases control panel:
 - Click **game-kb-0630**
 - In **Data source** section, check the data source **game_reviews-0630**
 - Click **Sync** button on the top right
+
+
+<hr/>
 
 ### Test the Agent in AWS Console
 
@@ -122,6 +132,9 @@ Try these sample questions in Chinese:
 - 2015年至2019年发布的游戏，在各地区的总销售额是多少？请以百分比形式给我数据。
 - 请简单介绍一下Moon Storm这款游戏
 
+
+<hr/>
+
 ### Create Agent Alias for Front-End Application
 
 To use the agent in your front-end application:
@@ -130,6 +143,8 @@ To use the agent in your front-end application:
 - Click **Create Alias**
 
 You can now proceed to the [Front-End Implementation - Integrating Amazon Bedrock Agent with a Ready-to-Use Data Analyst Assistant Application](../amplify-video-games-sales-assistant-bedrock-agent/). The tutorial will ask you for your **Agent Alias** along with the other services that you have created so far.
+
+<hr/>
 
 ### Cleaning-up Resources (Optional)
 
