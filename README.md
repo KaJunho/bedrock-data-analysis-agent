@@ -154,7 +154,135 @@ To avoid unnecessary charges, delete the AWS SAM application:
 sam delete
 ```
 
-### Thank You
+## Frontend Deployment
+
+### Prerequisites
+
+Before you begin, ensure you have:
+
+- An **Alias** created for your Amazon Bedrock Agent from the **Generative AI Application - Data Source and Amazon Bedrock Agent Deployment** tutorial
+- [Node.js version 18+](https://nodejs.org/en/download/package-manager)
+- React Scripts installed:
+``` bash
+npm install react-scripts
+```
+<hr/>
+
+### Set Up the Front-End Application
+
+Navigate to the React application folder (amplify-video-games-sales-assistant-sample/) and install the Reac application dependencies:
+
+``` bash
+npm install
+```
+<hr/>
+
+### Configure IAM User Access for Front-End Permissions
+
+- [Create an IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
+- [Create Access key and Secret access key](https://docs.aws.amazon.com/keyspaces/latest/devguide/create.keypair.html) for programmatic access
+- Add an inline policy to this user with the following JSON (replace placeholder values with your actual ARNs).
+
+Update the values with your **<agent_arn>**, **<agent_id>**, **<account_id>** and **<question_answers_table_arn>** that you can find in the outputs from the SAM tutorial.
+
+``` json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "InvokeBedrockAgent",
+            "Effect": "Allow",
+            "Action": [
+                "bedrock:InvokeAgent"
+            ],
+            "Resource": [
+                "<agent_arn>",
+                "arn:aws:bedrock:*:<account_id>:agent-alias/<agent_id>/*"
+            ]
+        },
+        {
+            "Sid": "InvokeBedrockModel",
+            "Effect": "Allow",
+            "Action": [
+                "bedrock:InvokeModel"
+            ],
+            "Resource": [
+                "arn:aws:bedrock:*:<account_id>:inference-profile/us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+                "arn:aws:bedrock:us-east-2::foundation-model/anthropic.claude-3-5-sonnet-20241022-v2:0",
+                "arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-5-sonnet-20241022-v2:0",
+                "arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-3-5-sonnet-20241022-v2:0"
+            ]
+        },
+        {
+            "Sid": "DynamoDB",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:Query"
+            ],
+            "Resource": "<question_answers_table_arn>"
+        }
+    ]
+}
+```
+<hr/>
+
+### Configure Environment Variables
+
+- Rename the file **src/sample.env.js** to **src/env.js** and update the following environment variables:
+
+    - AWS Credentials and Region:
+        - **ACCESS_KEY_ID**
+        - **SECRET_ACCESS_KEY**
+        - **AWS_REGION**
+
+    - Agent and table information that you can find in the CloudFormation Outputs from the SAM project:
+        - **AGENT_ID**
+        - **AGENT_ALIAS_ID**
+        - **QUESTION_ANSWERS_TABLE_NAME** 
+
+    - Also, you can update the general application description:
+        - **APP_NAME**
+        - **APP_SUBJECT**
+        - **WELCOME_MESSAGE**
+
+<hr/>
+
+### Test Your Data Analyst Assistant
+
+Start the application locally:
+
+``` bash
+npm start
+```
+
+
+### Application Features
+
+Congratulations! Your Data Analyst Assistant can provide you with the following conversational experience:
+
+- **Conversational interface with an agent responding to user questions**
+
+![Video Games Sales Assistant](../images/preview1.png)
+
+- **Detailed answers including the rationale behind SQL query generation**
+
+![Video Games Sales Assistant](../images/preview2.png)
+
+- **Raw query results displayed in tabular format**
+
+![Video Games Sales Assistant](../images/preview3.png)
+
+- **Chart visualization generated from the agent's answer and the data query results (created using [Apexcharts](https://apexcharts.com/))**.
+
+![Video Games Sales Assistant](../images/preview4.png)
+
+- **Summary and conclusion derived from the data analysis conversation**
+
+![Video Games Sales Assistant](../images/preview5.png)
+
+
+
+## Thank You
 
 ### License
 
