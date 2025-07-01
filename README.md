@@ -25,7 +25,7 @@ sam build
 ```
 
 > [!CAUTION]
-> If you encounter a **Build Failed error**, you might need to change the Python version in the [template.yaml](./template.yaml) file. By default, the Lambda function uses **Python 3.13**. You can modify this setting on **line 84** of the **[template.yaml](./template.yaml)** file to use a Python version lower than 3.13 that you have installed.
+> If you encounter a **Build Failed error**, you might need to change the Python version in the [template.yaml](./template.yaml) file. By default, the Lambda function uses **Python 3.13**. You can modify this setting on **line 121** of the **[template.yaml](./template.yaml)** file to use a Python version lower than 3.13 that you have installed.
 
 Now deploy the SAM application:
 
