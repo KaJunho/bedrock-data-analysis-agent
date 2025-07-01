@@ -146,14 +146,6 @@ You can now proceed to the [Front-End Implementation - Integrating Amazon Bedroc
 
 <hr/>
 
-### Cleaning-up Resources (Optional)
-
-To avoid unnecessary charges, delete the AWS SAM application:
-
-``` bash
-sam delete
-```
-
 ## Frontend Deployment
 
 ### Prerequisites
