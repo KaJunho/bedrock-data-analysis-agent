@@ -101,7 +101,7 @@ AURORA_SERVERLESS_DB_CLUSTER_ARN: ${AURORA_SERVERLESS_DB_CLUSTER_ARN}
 EOF
 ```
 
-Execute the following command to create the database and load the sample data:
+Execute the following command to create the database and load the sample data, under the SAM project foler (sam-bedrock-video-games-sales-assistant/).
 
 ``` bash
 python3 resources/create-sales-database.py
