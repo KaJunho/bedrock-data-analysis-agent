@@ -40,6 +40,11 @@ Now deploy the SAM application under the SAM project foler (sam-bedrock-video-ga
 sam deploy --guided --capabilities CAPABILITY_NAMED_IAM
 ```
 
+If not the first time deployment and do not modify config file, use this:
+```bash
+sam deploy --capabilities CAPABILITY_NAMED_IAM
+```
+
 Use the following value arguments for the deployment configuration:
 
 - Stack Name : **sam-bedrock-video-games-sales-assistant**
